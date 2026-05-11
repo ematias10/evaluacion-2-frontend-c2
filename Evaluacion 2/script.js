@@ -1,12 +1,6 @@
-// ============================================================
-// EVALUACIÓN SUMATIVA 2 — TIENDA ONLINE DE COMPUTADORES
-// Nombre del estudiante: _____________________________________
-// Fecha: ____________________________________________________
-// ============================================================
-
 
 // ============================================================
-// REQUERIMIENTO 1: BINDING DE DATOS
+// REQUERIMIENTO 1: VARIABLES DE DATOS
 // ============================================================
 // TODO: Defina una constante llamada 'listaProductos' que almacene
 // un arreglo con exactamente 5 objetos. Cada objeto representa un
@@ -19,16 +13,14 @@
 // Ejemplo de la estructura esperada (NO copiar, crear los propios):
 //   { id: 1, nombre: "Laptop Gamer X1", precio: 799990, stock: 5 }
 
-// const listaProductos = [...];
-
 
 // ============================================================
 // REQUERIMIENTO 2: ACUMULADOR GLOBAL DEL CARRITO
 // ============================================================
-// TODO: Declare un binding con 'let' para guardar el total acumulado
+// TODO: Declare una variable con 'let' para guardar el total acumulado
 // de la compra. Debe estar en el ámbito global (fuera de funciones).
 
-// let totalCompra = ...;
+
 
 
 // ============================================================
@@ -52,10 +44,8 @@
 //
 //   4. Dentro del bucle, use un if para verificar si stock === 0.
 //      Si se cumple, agregue la clase "sin-stock" al div de la tarjeta.
-//      ⚠️ Esta clase NO debe escribirse a mano en el HTML.
 //
-//   5. Inserte cada tarjeta en el contenedor usando innerHTML +=
-//      o insertAdjacentHTML('beforeend', ...).
+//   5. Inserte cada tarjeta en el contenedor usando appendChild o insertAdjacentHTML.
 
 // function renderizarTienda() {
 //   ...
@@ -67,7 +57,7 @@
 // ============================================================
 // TODO: Implemente la función 'agregarAlCarrito' que reciba el precio
 // de un producto como parámetro y realice lo siguiente:
-//   1. Súmelo al binding acumulador 'totalCompra'.
+//   1. Súmelo a la variable acumulador 'totalCompra'.
 //   2. Actualice el texto del elemento con id "total-compra" en el DOM
 //      usando la propiedad textContent para reflejar el nuevo total.
 //      Ejemplo de formato: "$1.299.980"
@@ -130,23 +120,3 @@
 // renderizarTienda();
 // ...
 
-
-// ============================================================
-// ANEXO: DOCUMENTACIÓN DE PROMPTS E IA (OBLIGATORIO)
-// ============================================================
-// Herramienta de IA utilizada : ______________________________
-//
-// Prompt usado para Regex de Tarjeta Visa:
-//   "___________________________________________________________"
-//
-// Prompt usado para Regex de CVV:
-//   "___________________________________________________________"
-//
-// Referencia APA del uso de IA:
-//   [Autor/Organización]. ([Año]). [Nombre del modelo]
-//   ([Versión]) [Modelo de lenguaje grande]. [URL]
-//
-//   Ejemplo:
-//   OpenAI. (2024). ChatGPT (Versión del 24 de mayo)
-//   [Modelo de lenguaje grande]. https://chat.openai.com
-// ============================================================
