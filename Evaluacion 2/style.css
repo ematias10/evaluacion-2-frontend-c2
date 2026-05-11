@@ -1,0 +1,249 @@
+/* ============================================================
+   EVALUACIÓN SUMATIVA 2 — TIENDA ONLINE DE COMPUTADORES
+   Hoja de estilos entregada por el docente (no modificar)
+   ============================================================ */
+
+/* 1. RESET CSS GLOBAL
+   Estandariza el modelo de cajas en todos los navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   ESTILOS BASE
+   ============================================================ */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* ============================================================
+   ENCABEZADO
+   ============================================================ */
+.encabezado {
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.encabezado h1 {
+  font-size: 2.2rem;
+  letter-spacing: 3px;
+  color: #00d4ff;
+}
+
+.encabezado p {
+  font-size: 0.95rem;
+  margin-top: 4px;
+  opacity: 0.7;
+}
+
+/* ============================================================
+   CONTENIDO PRINCIPAL
+   ============================================================ */
+.contenido-principal {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+/* ============================================================
+   SECCIÓN DE PRODUCTOS
+   ============================================================ */
+.seccion-productos h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  border-left: 4px solid #00d4ff;
+  padding-left: 10px;
+}
+
+/* 2. FLEXBOX PARA EL CONTENEDOR DE PRODUCTOS
+   Requerimiento: display flex + wrap + space-evenly */
+#contenedor-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+/* ============================================================
+   TARJETA DE PRODUCTO
+   ============================================================ */
+.tarjeta-producto {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-4px);
+}
+
+.tarjeta-producto h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #1a1a2e;
+}
+
+.tarjeta-producto .precio {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #00a896;
+  margin-bottom: 6px;
+}
+
+.tarjeta-producto .stock {
+  font-size: 0.82rem;
+  color: #888;
+  margin-bottom: 14px;
+}
+
+/* 3. BOTÓN "AGREGAR"
+   Requerimiento: cursor pointer + efecto hover */
+.btn-agregar {
+  background-color: #1a1a2e;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-agregar:hover {
+  background-color: #00d4ff;
+  color: #1a1a2e;
+  transform: scale(1.05);
+}
+
+/* 4. CLASE SIN STOCK
+   Requerimiento: aplicada dinámicamente por JS, NO escribir en HTML */
+.sin-stock {
+  opacity: 0.5;
+  filter: grayscale(100%);
+}
+
+/* ============================================================
+   SECCIÓN INFERIOR (CARRITO + FORMULARIO)
+   ============================================================ */
+.seccion-inferior {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+/* ============================================================
+   RESUMEN DEL CARRITO
+   ============================================================ */
+.carrito-resumen {
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+  border-radius: 10px;
+  padding: 24px;
+  min-width: 240px;
+  flex: 1;
+  max-width: 320px;
+}
+
+.carrito-resumen h2 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: #00d4ff;
+  border-bottom: 1px solid #ffffff22;
+  padding-bottom: 8px;
+}
+
+.total-texto {
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+#total-compra {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #00d4ff;
+}
+
+/* ============================================================
+   FORMULARIO DE PAGO
+   ============================================================ */
+.formulario-contenedor {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  flex: 1;
+  max-width: 420px;
+}
+
+.formulario-contenedor h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  border-left: 4px solid #00d4ff;
+  padding-left: 10px;
+}
+
+.campo-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+.campo-form label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #555;
+}
+
+.campo-form input {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 9px 12px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.campo-form input:focus {
+  border-color: #00d4ff;
+}
+
+.btn-pagar {
+  width: 100%;
+  background-color: #00a896;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.btn-pagar:hover {
+  background-color: #007f72;
+}
+
+/* ============================================================
+   MENSAJE DE VALIDACIÓN
+   ============================================================ */
+#mensaje-validacion {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  min-height: 20px;
+}
